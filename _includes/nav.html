@@ -1,0 +1,26 @@
+<div style="border: 1px solid red">
+
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+</div>
+
+
+
+<!--
+
+
+site.static_files
+
+site.html_pages
+
+site.collections
+
+site.data
+
+site.documents
+-->

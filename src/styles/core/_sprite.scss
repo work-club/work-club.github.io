@@ -1,0 +1,49 @@
+$twitter-icon--small: -2px -2px 28px 22px;
+$facebook-icon--small: -2px -28px 23px 23px;
+$share-icon: -2px -55px 35px 40px;
+$video-btn: -2px -99px 54px 54px;
+$twitter-icon: -2px -157px 72px 58px;
+$facebook-icon: -2px -219px 60px 60px;
+$video-play-btn: -2px -283px 50px 83px;
+
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 3);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 4);
+}
+
+@function sprite-width($sprite) {
+  @return nth($sprite, 3);
+}
+
+@function sprite-height($sprite) {
+  @return nth($sprite, 4);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 1);
+  $sprite-offset-y: nth($sprite, 2);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite($sprite) {
+  @include sprite-position($sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+.icon {
+  background-image: url('../images/sprites/sprite.png.png');
+}
+
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .icon {
+    background-image: url('../images/sprites/sprite.png-x2.png');
+    background-size: 76px 368px;
+  }
+}

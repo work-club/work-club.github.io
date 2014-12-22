@@ -1,0 +1,15 @@
+$supports-media-queries: true !default;
+
+@charset "UTF-8";
+/*------------------------------------*\
+    STYLE.SCSS
+\*------------------------------------*/
+/**
+ * Here we start to pull everything together into one big stylesheet.
+ *
+ * SETUP............Settings, tools, mixins, etc.
+ * GENERIC..........normalize.css, reset, shared styles, etc.
+ * GUI..............Components and modules.
+ */
+
+@import "core/all";
