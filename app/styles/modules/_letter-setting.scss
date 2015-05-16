@@ -1,0 +1,19 @@
+.letter-setting {
+
+    .letter-setting__opening {
+        margin-left: 88px;
+
+        @media screen and (min-width: 501px) {
+            margin-left: 170px;
+        }
+    }
+
+    p {
+        margin: 15px 0 30px 0;
+
+        @media screen and (min-width: 501px) {
+            margin: 30px 0 60px 0;
+        }
+    }
+
+}

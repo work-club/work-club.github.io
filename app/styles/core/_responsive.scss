@@ -1,0 +1,11 @@
+// Media Queries
+
+    $break-medium: 768px;
+    
+    @mixin respond-to($breakpoint, $media: all) {
+    	@if $breakpoint == medium {
+    		@media only #{$media} and (min-width: $break-medium) {
+    			@content;
+    		}
+    	}
+    }

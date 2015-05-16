@@ -1,0 +1,9 @@
+.valign {
+	display: table;
+	height: 100%;
+}
+
+	.valign__cell {
+		display: table-cell;
+		vertical-align: middle;
+	}

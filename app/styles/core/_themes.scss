@@ -1,0 +1,62 @@
+.theme {
+
+    &.theme--yellow {
+
+        .theme__colour {
+            color: yellow;
+        }
+
+        .theme__border {
+            border-top: 1px solid yellow;
+        }
+
+        .theme__background {
+            background-color: yellow;
+        }
+    }
+
+    &.theme--red {
+
+        .theme__colour {
+            color: red;
+        }
+
+        .theme__border {
+            border-top: 1px solid red;
+        }
+
+        .theme__background {
+            background-color: red;
+        }
+    }
+
+    &.theme--blue {
+
+        .theme__colour {
+            color: blue;
+        }
+
+        .theme__border {
+            border-top: 1px solid blue;
+        }
+
+        .theme__background {
+            background-color: blue;
+        }
+    }
+
+    &.theme--green {
+
+        .theme__colour {
+            color: green;
+        }
+
+        .theme__border {
+            border-top: 1px solid green;
+        }
+
+        .theme__background {
+            background-color: green;
+        }
+    }
+}

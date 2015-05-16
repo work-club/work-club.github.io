@@ -1,0 +1,9 @@
+{
+  "name": "work-club",
+  "version": "0.0.0",
+  "dependencies": {
+      "picturefill": "~2.3.1"
+  },
+  "appPath": "app",
+  "moduleName": "workClubApp"
+}
