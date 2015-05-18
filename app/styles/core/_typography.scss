@@ -1,21 +1,37 @@
 body{
     -webkit-font-smoothing: antialiased;
-    font-family: 'Merriweather', serif;
+    font-family: 'Varela', sans-serif;
     font-weight: 400;
     font-size: 1em;
     line-height: 2em;
 
     @media screen and (min-width: 501px) {
         font-size: 1.4em;
-        line-height: 2.2em;
+        line-height: 2em;
     }
 
     .bold {
         font-weight: bold;
+
+        @media screen and (max-width: 500px) {
+            letter-spacing: -1px;
+        }
+    }
+
+    .mobile-hide {
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
+    }
+
+    .mobile-show {
+        @media screen and (min-width: 501px) {
+            display: none;
+        }
     }
 
     p.padded-extra {
-        margin: 15px 0 45px 0;
+        margin: 15px 0 90px 0;
 
         @media screen and (min-width: 501px) {
             margin: 30px 0 90px 0;

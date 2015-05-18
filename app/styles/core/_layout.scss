@@ -22,4 +22,14 @@
 	text-decoration: none;
 	padding-bottom: 2px;
 	border-bottom: 2px solid #e41e1d;
+	transition: all 0.2s ease-in-out;
+
+	@media screen and (max-width: 500px) {
+        letter-spacing: -1px;
+    }
+
+	&:hover {
+		border-bottom: 2px solid #fff;
+		color: #e41e1d;
+	}
 }

@@ -6,49 +6,15 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <link href='http://fonts.googleapis.com/css?family=Merriweather:400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="styles/main.css">
+
+        <base href="/">
     </head>
     <body ng-app="app">
 
         <div class="container">
-            <header class="masthead">
-                <picture>
-                    <!--[if IE 9]><video style="display: none;"><![endif]-->
-                        <source srcset="images/work-club--small.png" media="(max-width: 500px)">
-                    <!--[if IE 9]></video><![endif]-->
-                    <img srcset="images/work-club--large.png" alt="" class="masthead__logo image-respond">
-                </picture>
-            </header>
-            <div class="letter-setting">
-                <p class="letter-setting__opening">
-                    Isn't so disruptive if<br/>you expect it.
-                </p>
-                <p>
-                    Technological patterns can be predicted, ideas can be
-                    tested and people can be prepared.
-                </p>
-                <p>
-                    Work Club is a digital agency built on people. Talented
-                    individuals who work well in teams. No fear of technology,
-                    change or each other. In collaboration, ready for whatever.
-                </p>
-                <p>
-                    Together we lean, sprint and prototype our way to new ideas.
-                    Ideas that help brands take their place in the digital world.
-                    Digital Ideas that help brands make the world a better place.
-                </p>
-                <p>
-                    Based our of London with clients all over the place, we sit
-                    at the centre of Havas Group - the only global €2bn marcomms
-                    group run by a 35 year old.
-                </p>
-
-                <p class="bold padded-extra">
-                    For more information please visit our minimum viable
-                    <a href="#" class="cta">resource centre</a>
-                </p>
-            </div>
+            <div ng-view></div>
             <footer class="footer">
                 <picture>
                     <!--[if IE 9]><video style="display: none;"><![endif]-->
@@ -57,26 +23,38 @@
                     <img srcset="images/work-club__footer--large.png" alt="" class="image-respond">
                 </picture>
 
-                <p class="footer__content footer__address">
-                    Axe &amp; Bottle Court<br/>
-                    70 Newcomen Street<br/>
-                    London<br/>
-                    SE1 1YT
-                </p>
-                <p class="footer__content footer__number">+44 207 407 7800</p>
-                <p class="footer__content">
-                    <a href="mailto:hello@work-club.com" class="cta">hello@work-club.com</a>
-                </p>
-                <p class="footer__content">
-                    <a href="http://www.twitter.com/workclub" class="cta">@workclub</a>
-                </p>
+                <div class="footer__column">
+                    <p class="footer__content footer__address">
+                        Axe &amp; Bottle Court<br/>
+                        70 Newcomen Street<br/>
+                        London<br/>
+                        SE1 1YT
+                    </p>
+                </div>
+                <div class="footer__column">
+                    <p class="footer__content footer__number">+44 207 407 7800</p>
+                    <p class="footer__content">
+                        <a href="mailto:hello@work-club.com" class="cta">hello@work-club.com</a>
+                    </p>
+                    <p class="footer__content">
+                        <a href="http://www.twitter.com/workclub" class="cta">@workclub</a>
+                    </p>
+                </div>
             </footer>
         </div>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
         <script src="bower_components/picturefill/dist/picturefill.js"></script>
         <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/scripts.js -->
+            <script src="scripts/main.js"></script>
+            <script src="scripts/controllers/homeCtrl.js"></script>
+            <script src="scripts/controllers/mvrcCtrl.js"></script>
         <!-- endbuild -->
     </body>
 </html>
