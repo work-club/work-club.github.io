@@ -7,6 +7,7 @@ var gulp          = require('gulp'),
     connect       = require('gulp-connect'),
     csso          = require('gulp-csso'),
     gulpif        = require('gulp-if'),
+    flatten       = require('gulp-flatten'),
     imagemin      = require('gulp-imagemin'),
     jshint        = require('gulp-jshint'),
     minifyHtml    = require('gulp-minify-html'),
@@ -88,7 +89,15 @@ gulp.task('minify', ['wiredep'], function () {
       '.'
     ]});
 
-    return gulp.src('app/*.html')
+    gulp.src('./app/favicon.ico')
+        .pipe(flatten())
+        .pipe(gulp.dest('./dist'));
+
+    gulp.src('./app/views/*.html')
+        .pipe(flatten())
+        .pipe(gulp.dest('./dist/views/'));
+
+    return gulp.src('./app/*.html')
         .pipe(assets)
         .pipe(ngAnnotate())
         .pipe(gulpif('*.js', uglify()))
@@ -168,6 +177,10 @@ gulp.task('sprites', ['clean-sprites'], function () { // ...then generate
         .pipe(gulpif('*.png', gulp.dest('./app/images/sprite/'), gulp.dest('./app/styles/base/')));
 });
 
+gulp.task('copy', function(){
+
+});
+
 // file rev
 // tests
 // phantom
@@ -176,7 +189,7 @@ gulp.task('sprites', ['clean-sprites'], function () { // ...then generate
 // clean: deletes existing dist folder
 // uncss: compile CSS and removes unused CSS selectors from distibution file
 // minify: insert all Bower assets and compile them
-gulp.task('build', ['clean', 'uncss', 'minify', 'imagemin'], function () {
+gulp.task('build', ['clean', 'uncss', 'minify', 'imagemin', 'copy'], function () {
     return gulp.src('dist/**/*').pipe(size({
         title: 'build',
         gzip: true
